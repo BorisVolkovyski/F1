@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A181562016D6105F006863B8 /* f1.icns in Resources */ = {isa = PBXBuildFile; fileRef = A181561F16D6105F006863B8 /* f1.icns */; };
 		A1BBE9D316D4F97E00F7CD3F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1BBE9D216D4F97E00F7CD3F /* Cocoa.framework */; };
 		A1BBE9DD16D4F97E00F7CD3F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1BBE9DB16D4F97E00F7CD3F /* InfoPlist.strings */; };
 		A1BBE9DF16D4F97E00F7CD3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BBE9DE16D4F97E00F7CD3F /* main.m */; };
 		A1BBE9E316D4F97E00F7CD3F /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A1BBE9E116D4F97E00F7CD3F /* Credits.rtf */; };
 		A1BBE9E616D4F97E00F7CD3F /* VBVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BBE9E516D4F97E00F7CD3F /* VBVAppDelegate.m */; };
 		A1BBE9E916D4F97F00F7CD3F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1BBE9E716D4F97F00F7CD3F /* MainMenu.xib */; };
+		A1BBE9F116D518FC00F7CD3F /* switch.scpt in Resources */ = {isa = PBXBuildFile; fileRef = A1BBE9F016D518FC00F7CD3F /* switch.scpt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A181561F16D6105F006863B8 /* f1.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = f1.icns; sourceTree = "<group>"; };
 		A1BBE9CF16D4F97E00F7CD3F /* F1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = F1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1BBE9D216D4F97E00F7CD3F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A1BBE9D516D4F97E00F7CD3F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -29,6 +32,7 @@
 		A1BBE9E416D4F97E00F7CD3F /* VBVAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBVAppDelegate.h; sourceTree = "<group>"; };
 		A1BBE9E516D4F97E00F7CD3F /* VBVAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBVAppDelegate.m; sourceTree = "<group>"; };
 		A1BBE9E816D4F97F00F7CD3F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		A1BBE9F016D518FC00F7CD3F /* switch.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = switch.scpt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +50,7 @@
 		A1BBE9C616D4F97E00F7CD3F = {
 			isa = PBXGroup;
 			children = (
+				A181561F16D6105F006863B8 /* f1.icns */,
 				A1BBE9D816D4F97E00F7CD3F /* F1 */,
 				A1BBE9D116D4F97E00F7CD3F /* Frameworks */,
 				A1BBE9D016D4F97E00F7CD3F /* Products */,
@@ -93,6 +98,7 @@
 		A1BBE9D916D4F97E00F7CD3F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A1BBE9F016D518FC00F7CD3F /* switch.scpt */,
 				A1BBE9DA16D4F97E00F7CD3F /* F1-Info.plist */,
 				A1BBE9DB16D4F97E00F7CD3F /* InfoPlist.strings */,
 				A1BBE9DE16D4F97E00F7CD3F /* main.m */,
@@ -129,7 +135,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = VBV;
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Boris Volkovyski";
 			};
 			buildConfigurationList = A1BBE9CA16D4F97E00F7CD3F /* Build configuration list for PBXProject "F1" */;
@@ -157,6 +163,8 @@
 				A1BBE9DD16D4F97E00F7CD3F /* InfoPlist.strings in Resources */,
 				A1BBE9E316D4F97E00F7CD3F /* Credits.rtf in Resources */,
 				A1BBE9E916D4F97F00F7CD3F /* MainMenu.xib in Resources */,
+				A1BBE9F116D518FC00F7CD3F /* switch.scpt in Resources */,
+				A181562016D6105F006863B8 /* f1.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +214,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -238,7 +245,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -266,7 +272,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "F1/F1-Prefix.pch";
 				INFOPLIST_FILE = "F1/F1-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -278,7 +286,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "F1/F1-Prefix.pch";
 				INFOPLIST_FILE = "F1/F1-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -302,6 +312,7 @@
 				A1BBE9EE16D4F97F00F7CD3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,7 +8,14 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface VBVAppDelegate : NSObject <NSApplicationDelegate>
+@interface VBVAppDelegate : NSObject <NSApplicationDelegate>{
+  IBOutlet NSMenu *statusMenu;
+  NSStatusItem *statusItem;
+  NSImage *statusImage;
+  NSImage *statusHighlightImage;
+}
+
+- (IBAction)switchFState:(id)sender;
 
 @property (assign) IBOutlet NSWindow *window;
 
