@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="1060" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4510"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -11,7 +11,7 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <menu title="AMainMenu" systemMenu="main" id="29">
             <items>
                 <menuItem title="F1" id="56">
@@ -649,16 +649,21 @@
         </menu>
         <customObject id="494" customClass="VBVAppDelegate">
             <connections>
+                <outlet property="controlMenuItem" destination="HLl-5h-6qh" id="GDB-eL-fw6"/>
+                <outlet property="hintMenuItem" destination="6Te-je-bcn" id="k75-rf-SV8"/>
                 <outlet property="statusMenu" destination="536" id="540"/>
             </connections>
         </customObject>
         <customObject id="420" customClass="NSFontManager"/>
         <menu id="536">
             <items>
-                <menuItem title="Switch keyboard F-keys behavior" id="537">
+                <menuItem title="Choose keyboard F-keys behavior" enabled="NO" id="6Te-je-bcn">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Switch behavior" id="HLl-5h-6qh">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="switchFState:" target="494" id="541"/>
+                        <action selector="switchFState:" target="494" id="vT8-qT-AHm"/>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="545"/>
@@ -669,6 +674,7 @@
                     </connections>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="116.5" y="-30.5"/>
         </menu>
     </objects>
 </document>

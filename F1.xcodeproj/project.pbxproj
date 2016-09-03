@@ -7,23 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A17DCC1C1D7B2C9B00567966 /* utils.m in Sources */ = {isa = PBXBuildFile; fileRef = A17DCC1A1D7B2C9B00567966 /* utils.m */; };
+		A17DCC1E1D7B320D00567966 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A17DCC1D1D7B320D00567966 /* IOKit.framework */; };
+		A17DCC201D7B4D0400567966 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A17DCC1F1D7B4D0400567966 /* CoreFoundation.framework */; };
 		A181562016D6105F006863B8 /* f1.icns in Resources */ = {isa = PBXBuildFile; fileRef = A181561F16D6105F006863B8 /* f1.icns */; };
+		A1AA4EDC1D7B55CA0054F96A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1AA4EDB1D7B55CA0054F96A /* Foundation.framework */; };
 		A1BBE9D316D4F97E00F7CD3F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1BBE9D216D4F97E00F7CD3F /* Cocoa.framework */; };
 		A1BBE9DD16D4F97E00F7CD3F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1BBE9DB16D4F97E00F7CD3F /* InfoPlist.strings */; };
 		A1BBE9DF16D4F97E00F7CD3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BBE9DE16D4F97E00F7CD3F /* main.m */; };
 		A1BBE9E316D4F97E00F7CD3F /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A1BBE9E116D4F97E00F7CD3F /* Credits.rtf */; };
 		A1BBE9E616D4F97E00F7CD3F /* VBVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BBE9E516D4F97E00F7CD3F /* VBVAppDelegate.m */; };
 		A1BBE9E916D4F97F00F7CD3F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1BBE9E716D4F97F00F7CD3F /* MainMenu.xib */; };
-		A1BBE9F116D518FC00F7CD3F /* switch.scpt in Resources */ = {isa = PBXBuildFile; fileRef = A1BBE9F016D518FC00F7CD3F /* switch.scpt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A181561F16D6105F006863B8 /* f1.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = f1.icns; sourceTree = "<group>"; };
+		A17DCC1A1D7B2C9B00567966 /* utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = utils.m; sourceTree = "<group>"; };
+		A17DCC1B1D7B2C9B00567966 /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
+		A17DCC1D1D7B320D00567966 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		A17DCC1F1D7B4D0400567966 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		A181561F16D6105F006863B8 /* f1.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = f1.icns; path = ../f1.icns; sourceTree = "<group>"; };
+		A1AA4EDB1D7B55CA0054F96A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A1BBE9CF16D4F97E00F7CD3F /* F1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = F1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1BBE9D216D4F97E00F7CD3F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		A1BBE9D516D4F97E00F7CD3F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		A1BBE9D616D4F97E00F7CD3F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		A1BBE9D716D4F97E00F7CD3F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A1BBE9DA16D4F97E00F7CD3F /* F1-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "F1-Info.plist"; sourceTree = "<group>"; };
 		A1BBE9DC16D4F97E00F7CD3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A1BBE9DE16D4F97E00F7CD3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -32,7 +37,6 @@
 		A1BBE9E416D4F97E00F7CD3F /* VBVAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBVAppDelegate.h; sourceTree = "<group>"; };
 		A1BBE9E516D4F97E00F7CD3F /* VBVAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBVAppDelegate.m; sourceTree = "<group>"; };
 		A1BBE9E816D4F97F00F7CD3F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		A1BBE9F016D518FC00F7CD3F /* switch.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = switch.scpt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1AA4EDC1D7B55CA0054F96A /* Foundation.framework in Frameworks */,
+				A17DCC201D7B4D0400567966 /* CoreFoundation.framework in Frameworks */,
+				A17DCC1E1D7B320D00567966 /* IOKit.framework in Frameworks */,
 				A1BBE9D316D4F97E00F7CD3F /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,7 +57,6 @@
 		A1BBE9C616D4F97E00F7CD3F = {
 			isa = PBXGroup;
 			children = (
-				A181561F16D6105F006863B8 /* f1.icns */,
 				A1BBE9D816D4F97E00F7CD3F /* F1 */,
 				A1BBE9D116D4F97E00F7CD3F /* Frameworks */,
 				A1BBE9D016D4F97E00F7CD3F /* Products */,
@@ -68,27 +74,23 @@
 		A1BBE9D116D4F97E00F7CD3F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A1AA4EDB1D7B55CA0054F96A /* Foundation.framework */,
+				A17DCC1F1D7B4D0400567966 /* CoreFoundation.framework */,
+				A17DCC1D1D7B320D00567966 /* IOKit.framework */,
 				A1BBE9D216D4F97E00F7CD3F /* Cocoa.framework */,
-				A1BBE9D416D4F97E00F7CD3F /* Other Frameworks */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A1BBE9D416D4F97E00F7CD3F /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A1BBE9D516D4F97E00F7CD3F /* AppKit.framework */,
-				A1BBE9D616D4F97E00F7CD3F /* CoreData.framework */,
-				A1BBE9D716D4F97E00F7CD3F /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
 		A1BBE9D816D4F97E00F7CD3F /* F1 */ = {
 			isa = PBXGroup;
 			children = (
-				A1BBE9E416D4F97E00F7CD3F /* VBVAppDelegate.h */,
+				A1BBE9DE16D4F97E00F7CD3F /* main.m */,
+				A1BBE9E016D4F97E00F7CD3F /* F1-Prefix.pch */,
 				A1BBE9E516D4F97E00F7CD3F /* VBVAppDelegate.m */,
+				A1BBE9E416D4F97E00F7CD3F /* VBVAppDelegate.h */,
+				A17DCC1A1D7B2C9B00567966 /* utils.m */,
+				A17DCC1B1D7B2C9B00567966 /* utils.h */,
 				A1BBE9E716D4F97F00F7CD3F /* MainMenu.xib */,
 				A1BBE9D916D4F97E00F7CD3F /* Supporting Files */,
 			);
@@ -98,11 +100,9 @@
 		A1BBE9D916D4F97E00F7CD3F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A1BBE9F016D518FC00F7CD3F /* switch.scpt */,
+				A181561F16D6105F006863B8 /* f1.icns */,
 				A1BBE9DA16D4F97E00F7CD3F /* F1-Info.plist */,
 				A1BBE9DB16D4F97E00F7CD3F /* InfoPlist.strings */,
-				A1BBE9DE16D4F97E00F7CD3F /* main.m */,
-				A1BBE9E016D4F97E00F7CD3F /* F1-Prefix.pch */,
 				A1BBE9E116D4F97E00F7CD3F /* Credits.rtf */,
 			);
 			name = "Supporting Files";
@@ -135,7 +135,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = VBV;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Boris Volkovyski";
 			};
 			buildConfigurationList = A1BBE9CA16D4F97E00F7CD3F /* Build configuration list for PBXProject "F1" */;
@@ -163,7 +163,6 @@
 				A1BBE9DD16D4F97E00F7CD3F /* InfoPlist.strings in Resources */,
 				A1BBE9E316D4F97E00F7CD3F /* Credits.rtf in Resources */,
 				A1BBE9E916D4F97F00F7CD3F /* MainMenu.xib in Resources */,
-				A1BBE9F116D518FC00F7CD3F /* switch.scpt in Resources */,
 				A181562016D6105F006863B8 /* f1.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A17DCC1C1D7B2C9B00567966 /* utils.m in Sources */,
 				A1BBE9DF16D4F97E00F7CD3F /* main.m in Sources */,
 				A1BBE9E616D4F97E00F7CD3F /* VBVAppDelegate.m in Sources */,
 			);
@@ -222,6 +222,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -235,7 +236,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -260,7 +261,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -268,11 +269,14 @@
 		A1BBE9ED16D4F97F00F7CD3F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "F1/F1-Prefix.pch";
 				INFOPLIST_FILE = "F1/F1-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.vbv.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
@@ -282,11 +286,14 @@
 		A1BBE9EE16D4F97F00F7CD3F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "F1/F1-Prefix.pch";
 				INFOPLIST_FILE = "F1/F1-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.vbv.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;

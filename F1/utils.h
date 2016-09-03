@@ -14,19 +14,29 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#import <Cocoa/Cocoa.h>
+#ifndef utils_h
+#define utils_h
 
-@interface VBVAppDelegate : NSObject <NSApplicationDelegate>{
-  IBOutlet NSMenu *statusMenu;
-  NSStatusItem *statusItem;
-  NSImage *statusImage;
-  NSImage *statusHighlightImage;
-}
+#include <IOKit/IOKitLib.h>
+#include <IOKit/IOReturn.h>
+#include <ApplicationServices/ApplicationServices.h>
+#include <IOKit/hidsystem/IOHIDLib.h>
+#include <IOKit/hidsystem/IOHIDParameter.h>
+#include <Foundation/Foundation.h>
 
-- (IBAction)switchFState:(id)sender;
+#define kMyDriversKeyboardClassName     "AppleADBKeyboard"
+#define kfnSwitchError                  200
+#define kfnAppleMode            0
+#define kfnFunctionMode         1
+#define kfnUnknownMode          2
 
-@property (weak) IBOutlet NSWindow *window;
-@property (weak) IBOutlet NSMenuItem *controlMenuItem;
-@property (weak) IBOutlet NSMenuItem *hintMenuItem;
+#ifndef kIOHIDFKeyModeKey
+#define kIOHIDFKeyModeKey    "HIDFKeyMode"
+#endif
 
-@end
+int lowLevelFnSwitch(int setting);
+void setFnKeysToFunctionMode();
+void setFnKeysToAppleMode();
+int getFnState();
+
+#endif /* utils_h */
