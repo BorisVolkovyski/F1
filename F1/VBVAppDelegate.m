@@ -15,10 +15,10 @@
  */
 
 #import "VBVAppDelegate.h"
+#import "VBVNotifier.h"
 #import "utils.h"
 
 @implementation VBVAppDelegate
-
 
 - (void) awakeFromNib {
 	statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
@@ -36,7 +36,7 @@
 	[statusItem setToolTip: @"Switch keyboard F-keys behavior"];
 	[statusItem setHighlightMode:YES];
 	
-	int fnKeysState = getFnState();
+	int fnKeysState = getFnKeysMode();
 	
 	if (fnKeysState == kfnAppleMode){
 		_hintMenuItem.title = @"F-keys operating as special keys";
@@ -52,16 +52,20 @@
 }
 
 - (IBAction)switchFState:(id)sender{
-	int fnKeysState = getFnState();
+	int fnKeysState = getFnKeysMode();
 	
 	if (fnKeysState == kfnAppleMode){
 		setFnKeysToFunctionMode();
 		_hintMenuItem.title = @"F-keys operating as function keys";
 		_controlMenuItem.title = @"Switch to special keys";
+
+		[VBVNotifier showNotifiacationWithTitle:@"F1" andText: @"F-keys set to function keys"];
 	}else if (fnKeysState == kfnFunctionMode){
 		setFnKeysToAppleMode();
 		_hintMenuItem.title = @"F-keys operating as special keys";
 		_controlMenuItem.title = @"Switch to function keys";
+		
+		[VBVNotifier showNotifiacationWithTitle:@"F1" andText: @"F-keys set to special keys"];
 	}else if (fnKeysState == kfnUnknownMode){
 		_hintMenuItem.title = @"Ups... Something went wrong";
 		_controlMenuItem.title = @"Unknown mode";

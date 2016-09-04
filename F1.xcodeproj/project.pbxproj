@@ -11,6 +11,7 @@
 		A17DCC1E1D7B320D00567966 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A17DCC1D1D7B320D00567966 /* IOKit.framework */; };
 		A17DCC201D7B4D0400567966 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A17DCC1F1D7B4D0400567966 /* CoreFoundation.framework */; };
 		A181562016D6105F006863B8 /* f1.icns in Resources */ = {isa = PBXBuildFile; fileRef = A181561F16D6105F006863B8 /* f1.icns */; };
+		A18976071D7C3DE800F8FF48 /* VBVNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = A18976061D7C3DE800F8FF48 /* VBVNotifier.m */; };
 		A1AA4EDC1D7B55CA0054F96A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1AA4EDB1D7B55CA0054F96A /* Foundation.framework */; };
 		A1BBE9D316D4F97E00F7CD3F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1BBE9D216D4F97E00F7CD3F /* Cocoa.framework */; };
 		A1BBE9DD16D4F97E00F7CD3F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1BBE9DB16D4F97E00F7CD3F /* InfoPlist.strings */; };
@@ -26,6 +27,8 @@
 		A17DCC1D1D7B320D00567966 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		A17DCC1F1D7B4D0400567966 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		A181561F16D6105F006863B8 /* f1.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = f1.icns; path = ../f1.icns; sourceTree = "<group>"; };
+		A18976051D7C3DE800F8FF48 /* VBVNotifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VBVNotifier.h; path = ../VBVNotifier.h; sourceTree = "<group>"; };
+		A18976061D7C3DE800F8FF48 /* VBVNotifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VBVNotifier.m; path = ../VBVNotifier.m; sourceTree = "<group>"; };
 		A1AA4EDB1D7B55CA0054F96A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A1BBE9CF16D4F97E00F7CD3F /* F1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = F1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1BBE9D216D4F97E00F7CD3F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -89,6 +92,8 @@
 				A1BBE9E016D4F97E00F7CD3F /* F1-Prefix.pch */,
 				A1BBE9E516D4F97E00F7CD3F /* VBVAppDelegate.m */,
 				A1BBE9E416D4F97E00F7CD3F /* VBVAppDelegate.h */,
+				A18976061D7C3DE800F8FF48 /* VBVNotifier.m */,
+				A18976051D7C3DE800F8FF48 /* VBVNotifier.h */,
 				A17DCC1A1D7B2C9B00567966 /* utils.m */,
 				A17DCC1B1D7B2C9B00567966 /* utils.h */,
 				A1BBE9E716D4F97F00F7CD3F /* MainMenu.xib */,
@@ -176,6 +181,7 @@
 			files = (
 				A17DCC1C1D7B2C9B00567966 /* utils.m in Sources */,
 				A1BBE9DF16D4F97E00F7CD3F /* main.m in Sources */,
+				A18976071D7C3DE800F8FF48 /* VBVNotifier.m in Sources */,
 				A1BBE9E616D4F97E00F7CD3F /* VBVAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,7 +222,9 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_STATIC_ANALYZER_MODE = deep;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
@@ -238,6 +246,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				ONLY_ACTIVE_ARCH = YES;
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -248,7 +257,9 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_STATIC_ANALYZER_MODE = deep;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
@@ -262,6 +273,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				ONLY_ACTIVE_ARCH = YES;
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = macosx;
 			};
 			name = Release;

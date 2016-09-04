@@ -34,9 +34,39 @@
 #define kIOHIDFKeyModeKey    "HIDFKeyMode"
 #endif
 
-int lowLevelFnSwitch(int setting);
+/*!
+ @brief Checks and returns current mode of top row of keys (F1-F12).
+ 
+ @discussion  There may be function ans special mode of keys, so method returns<br/>
+				<b>kfnAppleMode</b> for special mode (volume, iTunes controls, etc),<br/>
+				<b>kfnFunctionMode</b> for regular F1-F12,<br/>
+				and <b>kfnUnknownMode</b> if something gone wrong with mode check.
+ 
+ @return int Current mode of top row of keys
+ */
+int getFnKeysMode();
+
+/*!
+ @brief Low level toggle mode of top row of keys (F1-F12).
+ 
+ @discussion  There may be function ans special mode of keys, so method takes<br/>
+ <b>kfnAppleMode</b> for special mode (volume, iTunes controls, etc),<br/>
+ <b>kfnFunctionMode</b> for regular F1-F12.
+ 
+ @param  newMode Code of mode to toggle to.
+ 
+ @return int Current mode of top row of keys or -1 if failed.
+ */
+int lowLevelFnToggle(int newMode);
+
+/*!
+ @brief Set mode of top row of keys (F1-F12) to functions mode.
+  */
 void setFnKeysToFunctionMode();
+
+/*!
+ @brief Set mode of top row of keys (F1-F12) to special mode (volume, iTunes controls, etc).
+ */
 void setFnKeysToAppleMode();
-int getFnState();
 
 #endif /* utils_h */

@@ -16,7 +16,7 @@
 
 #include "utils.h"
 
-int getFnState()
+int getFnKeysMode()
 {
 	Boolean validValue;
 	Boolean result;
@@ -35,7 +35,7 @@ int getFnState()
 
 void setFnKeysToFunctionMode()
 {
-	unsigned int result = lowLevelFnSwitch(kfnFunctionMode);
+	unsigned int result = lowLevelFnToggle(kfnFunctionMode);
 	if (result == -1) return;
 	
 	CFPreferencesSetAppValue( CFSTR("fnState"), kCFBooleanTrue, CFSTR("com.apple.keyboard") );
@@ -48,7 +48,7 @@ void setFnKeysToFunctionMode()
 
 void setFnKeysToAppleMode()
 {
-	unsigned int result = lowLevelFnSwitch(kfnAppleMode);
+	unsigned int result = lowLevelFnToggle(kfnAppleMode);
 	if (result == -1) return;
 	
 	CFPreferencesSetAppValue( CFSTR("fnState"), kCFBooleanFalse, CFSTR("com.apple.keyboard") );
@@ -59,7 +59,7 @@ void setFnKeysToAppleMode()
 	
 }
 
-int lowLevelFnSwitch(int setting)
+int lowLevelFnToggle(int newMode)
 {
 	kern_return_t kernelReturnCode;
 	mach_port_t machPort;
@@ -92,8 +92,8 @@ int lowLevelFnSwitch(int setting)
 		return -1;
 	}
 	
-	if (setting == kfnAppleMode || setting == kfnFunctionMode) {
-		settingsLocalCopy = setting;
+	if (newMode == kfnAppleMode || newMode == kfnFunctionMode) {
+		settingsLocalCopy = newMode;
 		kernelReturnCode = IOHIDSetParameter(ioConnect, CFSTR(kIOHIDFKeyModeKey), &settingsLocalCopy, sizeof(settingsLocalCopy));
 		if (kernelReturnCode != KERN_SUCCESS) {
 			IOServiceClose(ioConnect);
@@ -104,3 +104,4 @@ int lowLevelFnSwitch(int setting)
 	IOServiceClose(ioConnect);
 	return result;
 }
+
