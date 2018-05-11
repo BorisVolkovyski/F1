@@ -44,7 +44,7 @@
 	}else if (fnKeysState == kfnFunctionMode){
 		_hintMenuItem.title = @"F-keys operating as function keys";
 		_controlMenuItem.title = @"Switch to special keys";
-	}else if (fnKeysState == kfnUnknownMode){
+	}else{
 		_hintMenuItem.title = @"Ups... Something went wrong";
 		_controlMenuItem.title = @"Unknown mode";
 	}

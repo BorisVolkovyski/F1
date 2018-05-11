@@ -44,7 +44,7 @@
  
  @return int Current mode of top row of keys
  */
-int getFnKeysMode();
+int getFnKeysMode(void);
 
 /*!
  @brief Low level toggle mode of top row of keys (F1-F12).
@@ -62,11 +62,11 @@ int lowLevelFnToggle(int newMode);
 /*!
  @brief Set mode of top row of keys (F1-F12) to functions mode.
   */
-void setFnKeysToFunctionMode();
+void setFnKeysToFunctionMode(void);
 
 /*!
  @brief Set mode of top row of keys (F1-F12) to special mode (volume, iTunes controls, etc).
  */
-void setFnKeysToAppleMode();
+void setFnKeysToAppleMode(void);
 
 #endif /* utils_h */
